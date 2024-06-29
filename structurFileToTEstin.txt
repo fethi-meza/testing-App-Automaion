@@ -1,0 +1,9 @@
+mkadir p- src/api
+mkadir p- src/pages
+mkadir p- src/utils
+mkadir p- src/config
+mkadir p- src/reporting
+mkadir p- src/logging
+mkadir p- src/data
+mkadir p- src/tests
+
