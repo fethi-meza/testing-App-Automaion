@@ -10,9 +10,7 @@ config();
 // import dotenv from 'dotenv';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
+
 export default defineConfig({
   testDir: './src/tests',
   /* Run tests in files in parallel */
