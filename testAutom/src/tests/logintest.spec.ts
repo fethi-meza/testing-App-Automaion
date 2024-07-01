@@ -1,10 +1,11 @@
-// logintest.spec.ts
-import { test, expect } from "@playwright/test"; // Import Playwright test utilities
+import { test, expect } from "@playwright/test"; 
 import { LoginPage } from "../pages/LoginPage";
 import { config } from 'dotenv'; 
+import{encrypt ,decrypt} from '../utils/CryptojsUtil'
+import{encryptEnvFile ,decryptEnvFile} from'../utils/EncryptEnvFile'
 
-// Load environment variables from specified .env file
-config({ path: "../../.env" }); // Adjust path as per your project structure
+
+config({ path: "../../.env" });
 
 // Check if environment variables are set
 if (!process.env.USERNAME || !process.env.PASSWORD) {
@@ -19,3 +20,16 @@ test('should log in successfully', async ({ page }) => {
     const homePage = await loginPage.clickLoginBtn();
     await homePage.expectServiceTitleToBeVisible();
 });
+test.skip("simple test encrypt and dcrypte",async ({ page }) => {
+//    const paintText = "hi-how-are-you";
+//    const encrptedText = encrypt(paintText);
+//    console.log("salt",process.env.SALT);
+//    console.log("encrptedText",encrptedText);
+//    const decrptedText = decrypt(encrptedText);
+//    console.log("decrptedText",decrptedText);
+
+   encryptEnvFile()
+   
+
+
+})
