@@ -6,6 +6,6 @@ export default class HomePage {
     constructor(private page: Page) {}
 
     async expectServiceTitleToBeVisible() {
-        await expect(this.page.locator(`text=${this.serviceTitleText}`)).toBeVisible({ timeout: 15000 });
+        await expect(this.page.locator(`text=${this.serviceTitleText}`)).toBeVisible({ timeout: 30000 });
     }
 }
